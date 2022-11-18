@@ -178,3 +178,7 @@ buildNumber.properties
 .classpath
 .project
 .settings/
+
+
+###Project specific files
+twitter4j.properties
