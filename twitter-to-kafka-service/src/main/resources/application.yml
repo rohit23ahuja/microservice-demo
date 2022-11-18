@@ -6,3 +6,8 @@ twitter-to-kafka-service:
     - Kafka
     - ElasticSearch
   welcome-message: Welcome to Event Driven Microservices
+  bearer-token: ${token:ABCD1234}
+  v2-enabled: true
+  rules-api-url: https://api.twitter.com/2/tweets/search/stream/rules
+  stream-api-url: https://api.twitter.com/2/tweets/search/stream
+  

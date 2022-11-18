@@ -13,4 +13,7 @@ import lombok.Data;
 public class TwitterToKafkaServiceConfigData {
     private List<String> twitterKeywords;
     private String welcomeMessage;
+    private String bearerToken;
+    private String rulesApiUrl;
+    private String streamApiUrl;
 }

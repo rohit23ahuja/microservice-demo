@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import javax.annotation.PreDestroy;
 
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.stereotype.Component;
 
 import com.microservice.demo.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
@@ -18,6 +19,7 @@ import twitter4j.TwitterStreamFactory;
 
 @Slf4j
 @Component
+@ConditionalOnProperty(value = "twitter-to-kafka-service.v2-enabled", havingValue = "false", matchIfMissing = false)
 public class TwitterKafkaStreamRunner implements StreamRunner {
 
     private final TwitterToKafkaServiceConfigData twitterToKafkaServiceConfigData;
